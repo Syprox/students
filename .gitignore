@@ -1,0 +1,11 @@
+*.pyc
+*~
+*.egg-info
+*.mo
+*.egg
+*.jpg
+*.jpeg
+*.gif
+*.png
+*.sqlite3
+manage.py
