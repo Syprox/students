@@ -7,9 +7,6 @@ from django.conf import settings
 from django.http import HttpResponse
 from django.shortcuts import render
 
-def students_list(request):
-    return render(request, "students/students_list.html",{})
-
 def home(request):
     
     title = 'Welcome!'
@@ -22,5 +19,42 @@ def home(request):
     
     return render(request, "/studentsdb/templates/groups.html",context)
 
+#Views for Students
+
+def students_list(request):
+    return render(request, "students/students_list.html", {})
+
+def students_add(request):
+    return HttpResponse('<h1>Student Add Form</h1>')
+
+def students_edit(request, sid):
+    return HttpResponse('<h1>Edit Student %s</h1>' % sid)
+
+def students_delete(request, sid):
+    return HttpResponse('<h1>Delete Student %s</h1>' % sid)
+
+# Views for Groups
+
 def groups_list(request):
-    return HttpResponse('<h1>Groups Listing</h1>')
+    return render(request, "students/groups_list.html", {})
+
+def groups_add(request):
+    return HttpResponse('<h1>Group Add Form</h1>')
+
+def groups_edit(request, gid):
+    return HttpResponse('<h1>Edit Group %s</h1>' % gid)
+
+def groups_delete(reqest, gid):
+    return HttpResponse('<h1>Delete Group %s</h1>' % gid)
+
+# Views for journal
+
+def journal(request):
+    return render(request, "students/journal.html", {})
+
+def journal_student(request, sid):
+    return HttpResponse('<h1>Journal Student</h1>')
+
+def journal_group(request, gid):
+    return HttpResponse('<h1>Journal Group</h1>')
+
