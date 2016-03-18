@@ -29,15 +29,16 @@ urlpatterns = [
     url(r'^students/add/$', 'students.views.students_add', name='students_add'),
     url(r'^students/(?P<sid>\d+)/edit/$', 'students.views.students_edit', name='students_edit'),
     url(r'^students/(?P<sid>\d+)/delete/$', 'students.views.students_delete', name='students_delete'),
+    url(r'^students/(?P<sid>\d+)/journal/$', 'students.views.students_journal', name='students_journal'),
     
     # urls for groups
     url(r'^groups/$', 'students.views.groups_list', name='groups_list'),
     url(r'^groups/add/$', 'students.views.groups_add', name='groups_add'),
-    url(r'^groups/(?P<gid>\d+)/edit/$', 'students.views.groups_edit', name='groups_edit'),
-    url(r'^groups/(?P<gid>\d+)/delete/$', 'students.views.groups_delete', name='groups_delete'),
+    url(r'^groups/(?P<gid>\d+)/edit/$', 'students.views.groups_edit', name = 'groups_edit'),
+    url(r'^groups/(?P<gid>\d+)/delete/$', 'students.views.groups_delete', name = 'groups_delete'),
+    url(r'^groups/(?P<gid>\d+)/lider/$', 'students.views.groups_lider', name = 'groups_lider'),
+    url(r'^groups/(?P<gid>\d+)/journal/$', 'students.views.groups_journal', name = 'groups_journal'),
     
     # urls for attendence
-    url(r'^journal/$', 'students.views.journal', name='journal'),
-    url(r'^journal/(?P<sid>\d+)/$', 'students.views.journal_student', name='journal_student'),
-    url(r'^journal/(?P<gid>\d+)/$', 'students.views.journal_group', name='journal_group'),
+    url(r'^journal/$', 'students.views.journal', name='journal')
 ]

@@ -1,60 +1,12 @@
-<!doctype html>
-<html lang="uk">
-<head>
-	<meta charset="UTF-8" />
-	<meta name="description" value="Система Обліку Студентів Навчального Закладу" />
-	<!-- Include Styles -->
- 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/bootstrap/3.3.0/css/bootstrap.min.css">
- 	<link rel="stylesheet" href="../static/css/main.css">
- 	<style type="text/css">
- 		
- 	</style>
-	<title>Сервіс обліку студентів</title>
-</head>
-<body>
-		<!-- Start Container -->
-		<div class="container">
-	
-			<!-- Start Header -->
-			<div class="row" id="header">
-		
-				<!-- Logo -->
-				<div class="col-xs-8">
-				<h1>Сервіс Обліку Студентів</h1>
-				</div>
-			
-				<!-- Groups Selector -->
-				<div class="col-xs-4" id="group-selector">
-					<strong>Група:</strong>
-					<select>
-						<option value="">Усі Студенти</option>
-						<option value="">МтМ - 21, Подоба Віталій (№ 254)</option>
-						<option value="">МтМ - 22, Корост Андрій (№ 2123)</option>
-						<option value="">91ДПМ</option>
-						<option value="">91ДР</option>
-					</select>
-				</div>
-			</div>
-			<!-- End Header -->
-		
-			<!-- Start SubHeader -->
-			<div class="row" id="sub-header">
-				<div class="col-xs-12">
-				<ul class="nav nav-tabs" role="tablist">
-				<li role="presentation"><a href="#">Студенти</a></li>
-				<li role="presentation" class="active"><a href="#">Відвідування</a></li>
-				<li role="presentation"><a href="#">Групи</a></li>
-				</ul>
-				</div>
-			</div>
-			<!-- End SubHeader -->
-			
-			<!-- Start Main Page Content -->
-			<div class="row" id="content-columns">
-				<div class="col-xs-12" id="content-column">
-					<!-- Status Message -->
-					<!-- <div class="alert alert-warning">Зміни скасовано.</div> -->
-					<h2>Облік Відвідування</h2>
+{% extends "students/base.html" %}
+
+{% load static from staticfiles %}
+
+{% block meta_title %}Студенти{% endblock meta_title %}
+
+{% block title %}База студентів{% endblock title %}
+
+{% block content %}
 					<!-- Month Name -->
 					<div class="col-xs-12 text-center" id="month">
 					<a href="#">&larr;</a> Лютий 2016 <a href="#">&rarr;</a>
